@@ -6,7 +6,7 @@ import recommendor
 import place_func
 import rest_recc
 import nltk
-nltk.download(‘punkt’)
+nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
