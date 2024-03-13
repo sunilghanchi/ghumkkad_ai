@@ -5,3 +5,4 @@ numpy
 nltk
 streamlit
 pysqlite3
+gunicorn
