@@ -4,3 +4,4 @@ pandas
 numpy
 nltk
 streamlit
+_sqlite3
