@@ -131,7 +131,8 @@ footer {
     color: #000;
     text-align: center;
     padding: 20px 0;
-    position: relative; /* Set the footer position to relative */
+    position: fixed; /* Set the footer position to relative */
+    bottom: 0;
     height: 6vh;
     width: 100%;
     display: flex;
