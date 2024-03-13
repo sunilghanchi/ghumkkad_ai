@@ -1,2 +1,2 @@
-# ghumkkad_ai
+# Ghumkkad AI - A Travel Recommendation System
  
