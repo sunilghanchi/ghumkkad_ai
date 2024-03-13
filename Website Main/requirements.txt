@@ -1,7 +1,6 @@
 flask
 flask_cors
 pandas
-pickle
 numpy
 nltk
 streamlit
