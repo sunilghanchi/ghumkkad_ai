@@ -4,7 +4,6 @@ function capitalizeFirstLetter(str) {
     return char.toUpperCase();
   });
 }
-
 var dest_err = document.getElementById("dest_err");
 var price_err = document.getElementById("price_err");
 
@@ -271,4 +270,3 @@ document
         return;
     }
   });
-
