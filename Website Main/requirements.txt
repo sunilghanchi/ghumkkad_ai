@@ -6,3 +6,7 @@ nltk
 streamlit
 pysqlite3
 gunicorn
+import nltk
+nltk.download(‘punkt’)
+nltk.download('stopwords')
+nltk.download('wordnet')
