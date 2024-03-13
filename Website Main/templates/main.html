@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumkkad AI</title>
+    <link rel="icon" href="static/favi.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/a34681a928.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/hotel?f=classic&s=solid"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="head_container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Ghumkkad AI Logo">
+            </div>
+            <div class="nav">
+                <ul id="nav">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Discover Your Next Adventure</h2>
+                <p class="title">Get personalized travel recommendations based on your preferences.</p>
+                <form id="recommendation-form">
+                    <div class="form-table">
+                        <div class="form-row required">
+                            <label id="dest_label" for="destination">Destination:</label>
+                            <input type="text" id="destination" name="destination" placeholder="Enter destination" oninput="return clr_err('destination','dest_err')">
+                        </div>
+                        <p id="dest_err" class="error"></p>
+                        <div class="form-row">
+                            <label for="hotel-features">Hotel Features:</label>
+                            <input type="text" id="hotel-features" name="hotel-features" placeholder="Enter desired hotel features">
+                        </div>
+                        <div class="form-row">
+                            <label for="attraction-features">Attraction Features:</label>
+                            <input type="text" id="attraction-features" name="attraction-features" placeholder="Enter desired attractions">
+                        </div>
+                        <div class="form-row">
+                            <label for="restaurant-description">Restaurant Description:</label>
+                            <input type="text" id="restaurant-description" name="restaurant-description" placeholder="Enter desired restaurant description">
+                        </div>
+                        <div class="form-row">
+                            <label for="restaurant-locality">Restaurant Locality:</label>
+                            <input type="text" id="restaurant-locality" name="restaurant-locality" placeholder="Enter desired restaurant locality">
+                        </div>
+                        <div class="form-row required">
+                            <label for="hotel-price">Maximum Hotel Price:</label>
+                            <input type="number" id="hotel-price" name="hotel-price" placeholder="Enter maximum hotel price" oninput="return clr_err('hotel-price','price_err')">
+                        </div>
+                        <p id="price_err" class="error"></p>
+                        <div class="form-row">
+                            <button type="submit">Get Recommendations</button>
+                            <div id="error-message" class="error-message"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="show_error">
+
+        </section>        
+    </main>
+    <!-- Recommendation Results Section -->
+    <section id="recommendation-results" class="container">
+        <!-- This is where the recommendation results will be displayed -->
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ghumkkad AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

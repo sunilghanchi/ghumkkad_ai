@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Ghumkkad AI</title>
+    <link rel="icon" href="static/favi.png" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='about.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="head_container">
+        <div class="logo">
+          <img
+            src="{{ url_for('static', filename='logo.png') }}"
+            alt="Ghumkkad AI Logo"
+          />
+        </div>
+        <div class="nav">
+          <ul id="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about" class="active">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about">
+        <div class="website">
+          <h2 class="about_heading">About Ghumkkad AI</h2>
+          <p>
+            Welcome to Ghumkkad AI, your personalized travel companion! We
+            strive to provide you with the best travel recommendations based on
+            your preferences and interests. Our team is dedicated to making your
+            travel experiences memorable and enjoyable.
+          </p>
+          <br />
+          
+          <p>
+            Explore new destinations, discover exciting attractions, and savor
+            delicious cuisines with Ghumkkad AI. Whether you're planning a solo
+            adventure or a family vacation, let Ghumkkad AI be your guide.
+          </p>
+          <p>
+            Thank you for choosing Ghumkkad AI for your travel needs. Happy
+            travels!
+          </p>
+          <br />
+          <h2 class="about_heading">How it is working?</h2>
+          <p>
+            Our platform operates by allowing users to input their desired
+            destination, hotel features, attraction features, restaurant
+            description, restaurant locality, and maximum hotel price. While the
+            destination and maximum hotel price fields are mandatory, users have
+            the flexibility to specify additional preferences based on their
+            preferences.
+          </P>
+          <p> 
+            Once all necessary information is provided, our system
+            utilizes advanced algorithms to sift through vast databases of
+            hotels, attractions, and restaurants. By analyzing user inputs and
+            utilizing machine learning techniques, we curate personalized
+            recommendations tailored to individual preferences. Users can expect
+            a comprehensive list of top recommendations that match their
+            criteria, ensuring an enriched travel experience. 
+          </p>
+          <p>
+            Whether it's
+            seeking luxurious accommodations, nearby attractions, or dining
+            experiences matching specific tastes, our platform aims to
+            streamline the trip planning process and deliver the best-suited
+            options for every traveler.
+          </p>
+          <br />
+          
+        </div>
+        <br />
+        <!-- About the Founder -->
+        <h2 class="about_heading">About the Founder</h2>
+        <div class="founder">
+          <div class="founder-img-container">
+            <img
+              src="{{ url_for('static', filename='founder_pic.png') }}"
+              alt="Sunil Ghanchi"
+              class="founder-img"
+            />
+          </div>
+          <div class="found_text">
+            <div class="founder-details">
+              <h3>Sunil Ghanchi</h3>
+              <!-- Founder's name -->
+              <p class="founder-subtitle">Founder and CEO of Ghumkkad AI</p>
+              <!-- Founder's subtitle -->
+            </div>
+            <p>
+              Sunil Ghanchi is an AI/ML Intern at Linearloop, currently in his
+              final semester pursuing a Bachelor of Engineering from SAL College
+              of Engineering, Ahmedabad.
+            </p>
+
+            <p>
+              Passionate about both technology and travel, Sunil's wanderlust
+              has taken him to destinations like Chardham, Uttarakhand, Manali,
+              Kashmir, and Jammu.
+            </p>
+
+            <p>
+              However, he often encountered the challenge of finding suitable
+              accommodations during his adventures. Fueled by his love for
+              exploration and a desire to help fellow travelers, Sunil developed
+              Ghumkkad AI.
+            </p>
+
+            <p>
+              His vision is to create a reliable and user-friendly platform that
+              provides travelers worldwide with the best travel recommendations,
+              making trip planning hassle-free.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Ghumkkad AI. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    background-image: url("./1.jpg"); /* Path to your photograph */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; /* Adjust brightness to make the photograph darker */
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #87CEEB; /* Sky blue color for the header */
+    color: #000; /* Black text color */
+    padding: 20px 0; /* Adjust padding as needed */
+    position: absolute; /* Set the header position to relative */
+    z-index: 100;
+    text-align: center; /* Center the content */
+    width: 100%; /* Set the width to 100% */
+    height: 8vh; /* Set the height to your desired value */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Maintain the font size of the header */
+}
+
+.head_container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+}
+
+.logo{
+    width: 30%;
+    height: 100%;
+}
+
+.nav{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    gap: 80px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last child to prevent spacing */
+}
+
+.nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+ul#nav .active{
+    font-weight: bold;
+}
+
+main {
+    padding: 20px 0;
+    box-sizing: border-box;
+    height: 94vh;
+    background-color: #ffffff37;
+    backdrop-filter: blur(5px);
+}
+
+.hero {
+    padding: 60px 0;
+    padding-bottom: 20px;
+    text-align: center;
+    height: auto;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#recommendation-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.error{
+    text-align: right;
+    color: red;
+    font-size: small;
+}
+
+#recommendation-form .form-row {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#recommendation-form label {
+    width: 200px;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+#recommendation-form input[type="text"],
+#recommendation-form input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#recommendation-form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+#show_error{
+    text-align: center;
+    font-size: large;
+}
+
+#recommendation-results {
+    top: 7vh;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 30px;
+    width: 70vw;
+    height: 80vh;
+    /* overflow-y: overlay;
+    overflow-x: hidden; */
+    background-color: #ffffff37;
+    backdrop-filter: blur(10px);
+    left: 15vw;
+    border: 1px solid black;
+    box-sizing: border-box;
+    box-shadow: 0 100px 100px 0 rgba(0, 0, 0, 0.2), 0 100px 100px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    display: none;
+}
+
+.div_close{
+    height: 4vh;
+    width: 69.8vw;
+    position: fixed;
+    display: flex;
+    top: 0;
+    border-top-left-radius: 10px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    background-color: white;
+    box-sizing: border-box;
+    right: 0;
+    z-index: 5000;
+}
+
+.res_close{
+    height: 4vh;
+    width: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    background-color: red;
+    position: fixed;
+    right: 0;
+    box-sizing: border-box;
+}
+
+#content-div{
+    height: 74vh;
+    margin-top: 5vh;
+    padding-left: 20px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    position: relative;
+    bottom: 20px;
+    padding-top: 20px;
+}
+
+.res_head{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.title_head{
+    margin: 10px 0;
+    width: 65vw;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: x-large;
+    text-align: center;
+}
+
+.head_res_hr{
+    border: 2px solid black;
+    margin-top: 14px;
+}
+
+.content{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.toggle_content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+}
+
+.each_content{
+    /* border: 1px solid black; */
+    padding: 20px;
+    background-color: #c1ebfb;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    display: grid;
+    position: sticky;
+    bottom: 62px;
+    height: 42vh;
+    text-align: justify;
+    box-shadow: 0 12px 8px 0px rgba(0, 0, 0, 0.1), 0 0 0 0px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    overflow: auto;
+}
+
+footer {
+    background-color: #87CEEB; /* Sky blue color for the footer */
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Set the footer position to relative */
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Increase the logo size */
+header img {
+    width: 200px; /* Increase the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position the logo absolutely */
+    left: 20px; /* Adjust the left position */
+    top: 50%; /* Position it at the center vertically */
+    transform: translateY(-50%); /* Center it vertically */
+}
