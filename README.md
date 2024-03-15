@@ -12,16 +12,17 @@ Ghumkkad AI is a comprehensive travel recommendation system that leverages three
 
 ## Components
 
-- **website/main/app.py:** Flask backend responsible for handling API calls, coordinating recommendation functions, and serving the main website.
-- **website/main/static:** Contains CSS, JavaScript, and other static files for the main website's frontend.
-- **website/main/templates:** HTML files for the main website's frontend.
-- **website/main/recommendation_functions:** Functions related to recommendation algorithms.
-- **website/main/ipynb_notebooks:** Jupyter Notebook files for data preprocessing and model training.
-- **website/main/pickle_files:** Contains all pickle files used by the recommendation functions.
-- **streamlit/hotel_app.py:** Streamlit web application for interacting with the recommendation system through a user-friendly interface.
-- **streamlit/recommendation_functions:** Functions related to recommendation algorithms for the Streamlit app.
-- **streamlit/ipynb_notebooks:** Jupyter Notebook files for data preprocessing and model training for the Streamlit app.
-- **streamlit/pickle_files:** Contains all pickle files used by the recommendation functions for the Streamlit app.
+- **Website Main/app.py:** Flask backend responsible for handling API calls, coordinating recommendation functions, and serving the main website.
+- **Website Main/static:** Contains CSS, JavaScript, and other static files for the main website's frontend.
+- **Website Main/templates:** HTML files for the main website's frontend.
+- **Website Main/recommendation_functions:** Functions related to recommendation algorithms for flask.
+- **Website Main/.ipynb notebooks:** Jupyter Notebook files that contain data preprocessing and model training for flask.
+- **Website Main/.pkl files:** All pickle files are the preprocessed dataframes for the recommendation function for flask.
+- **Streamlit Website/hotel_app.py:** Streamlit web application for interacting with the recommendation system through a user-friendly interface.
+- **Streamlit Website/recommendation_functions:** Functions related to recommendation algorithms for the Streamlit app.
+- **Streamlit Website/.ipynb notebooks:** Jupyter Notebook files that contain data preprocessing and model training for streamlit.
+- **Streamlit Website/.pkl files:** All pickle files are the preprocessed dataframes for the recommendation function for streamlit.
+- **Project_Datasets.zip:** Contains all the datasets that are used for recommendation. 
 
 ## Usage
 
@@ -41,7 +42,7 @@ pip install -r requirements.txt
 3. Run the Flask backend:
 
 ```bash
-cd website/main
+cd "Website Main"
 python app.py
 ```
 
@@ -56,7 +57,7 @@ streamlit run hotel_app.py
 
 ## Deployment
 
-This project is deployed on [Heroku](https://www.heroku.com/) using [On-Render](https://onrender.com/). You can access the deployed version [here](#) (provide link to your deployed application).
+This project is deployed on [On-Render](https://onrender.com/). You can access the deployed version [here]([#](https://ghumkkad-ai.onrender.com/)) (provide link to your deployed application).
 
 ## Contributors
 
