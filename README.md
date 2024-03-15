@@ -22,15 +22,15 @@ Ghumkkad AI is a comprehensive travel recommendation system that leverages three
 - **Streamlit Website/recommendation_functions:** Functions related to recommendation algorithms for the Streamlit app.
 - **Streamlit Website/.ipynb notebooks:** Jupyter Notebook files that contain data preprocessing and model training for streamlit.
 - **Streamlit Website/.pkl files:** All pickle files are the preprocessed dataframes for the recommendation function for streamlit.
-- **Project_Datasets.zip:** Contains all the datasets that are used for recommendation. 
+- **Project_datasets.zip:** Contains all the datasets that are used for recommendation. 
 
 ## Usage
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ghumkkad-ai.git
-cd ghumkkad-ai
+git clone https://github.com/sunilghanchi/ghumkkad_ai.git
+cd ghumkkad_ai
 ```
 
 2. Install dependencies:
@@ -57,7 +57,7 @@ streamlit run hotel_app.py
 
 ## Deployment
 
-This project is deployed on [On-Render](https://onrender.com/). You can access the deployed version [here]([#](https://ghumkkad-ai.onrender.com/)) (provide link to your deployed application).
+This project is deployed on [On-Render](https://onrender.com/). You can access the deployed version website: [Ghumkkad AI](https://ghumkkad-ai.onrender.com/)
 
 ## Contributors
 
