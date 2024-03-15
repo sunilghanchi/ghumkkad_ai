@@ -62,7 +62,8 @@ This project is deployed on [On-Render](https://onrender.com/). You can access t
 ## Contributors
 
 - [Sunil Ghanchi](https://github.com/sunilghanchi)
+- Contributions to the project are welcome! If you encounter any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
