@@ -166,7 +166,7 @@ document
             data.hotels.forEach(function (hotel) {
               var hot_id = 'hot_content'+i;
               console.log(hot_id);
-              var hotelDetails = `<div id=${hot_id} class='each_content'><p><strong>Name:</strong> ${capitalizeFirstLetter(
+              var hotelDetails = `<div id=${hot_id} class='each_content'><p><strong>Name of Hotel:</strong> ${capitalizeFirstLetter(
                 hotel.Name
               )}</p><p><strong>Address:</strong> ${capitalizeFirstLetter(
                 hotel.Address
@@ -241,7 +241,7 @@ document
             var k = 0;
             data.restaurants.forEach(function (restaurant) {
               var rest_id = 'rest_content'+k;
-              var restaurantDetails = `<div id=${rest_id} class='each_content'><p><strong>Name:</strong> ${capitalizeFirstLetter(
+              var restaurantDetails = `<div id=${rest_id} class='each_content'><p><strong>Name of Restaurant:</strong> ${capitalizeFirstLetter(
                 restaurant.Name
               )}</p><p><strong>Type:</strong> ${capitalizeFirstLetter(
                 restaurant.Type
