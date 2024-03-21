@@ -277,8 +277,7 @@ footer {
     color: #000;
     text-align: center;
     padding: 20px 0;
-    position: fixed; /* Set the footer position to relative */
-    bottom: 0;
+    position: relative; /* Set the footer position to relative */
     height: 6vh;
     width: 100%;
     display: flex;
@@ -296,3 +295,62 @@ header img {
     top: 50%; /* Position it at the center vertically */
     transform: translateY(-50%); /* Center it vertically */
 }
+#print-btn{
+    height: 20px;
+    background-color: red;
+    color: white;
+    width: fit-content;
+    padding: 4px;
+    position: relative;
+    bottom: 8px;
+}
+
+/* Styles for the print button */
+#print-btn {
+    display: block;
+    margin: 20px auto; /* Center the button horizontally */
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #print-btn:hover {
+    background-color: #ee0c0c;
+  }
+  /* Styles for the button loading animation */
+.loading {
+    position: relative;
+    background-color: transparent;
+    transition: color 0.5s ease;
+  }
+  
+  .loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f44336, #e91e63, #9c27b0, #673ab7, #3f51b5, #2196f3, #03a9f4, #00bcd4, #009688, #4caf50, #8bc34a, #cddc39, #ffeb3b, #ffc107, #ff9800, #ff5722);
+    background-size: 800% 800%;
+    animation: loadingAnimation 2s ease infinite;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
