@@ -1,6 +1,6 @@
 # Ghumkkad AI - A Travel Recommendation System
 
-Ghumkkad AI is a comprehensive travel recommendation system that leverages three distinct recommendation engines for hotels, attractions, and restaurants. This system enables users to input their desired destination, hotel features, attraction features, restaurant description, restaurant locality, and maximum hotel price. By employing advanced algorithms and machine learning techniques, Ghumkkad AI curates personalized recommendations tailored to individual preferences.
+Ghumkkad AI is a comprehensive travel recommendation system that leverages three distinct recommendation engines for hotels, attractions, and restaurants. This system enables users to input their desired destination, days of travel, hotel features, attraction features, restaurant description, restaurant locality, and maximum hotel price. By employing advanced algorithms and machine learning techniques, Ghumkkad AI curates personalized recommendations tailored to individual preferences.
 
 ## Features
 
