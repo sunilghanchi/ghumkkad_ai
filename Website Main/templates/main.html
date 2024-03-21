@@ -40,6 +40,10 @@
                             <input type="text" id="destination" name="destination" placeholder="Enter destination" oninput="return clr_err('destination','dest_err')">
                         </div>
                         <p id="dest_err" class="error"></p>
+                        <div class="form-row required">
+                            <label id="days_label" for="days">Days of Travel:</label>
+                            <input type="text" id="days" name="days" placeholder="Enter number of days" oninput="return clr_err('days','dest_err')">
+                        </div>
                         <div class="form-row">
                             <label for="hotel-features">Hotel Features:</label>
                             <input type="text" id="hotel-features" name="hotel-features" placeholder="Enter desired hotel features">
@@ -62,7 +66,9 @@
                         </div>
                         <p id="price_err" class="error"></p>
                         <div class="form-row">
+                            
                             <button type="submit">Get Recommendations</button>
+                            
                             <div id="error-message" class="error-message"></div>
                         </div>
                     </div>
@@ -77,6 +83,7 @@
     <section id="recommendation-results" class="container">
         <!-- This is where the recommendation results will be displayed -->
     </section>
+    
 
     <footer>
         <div class="container">
