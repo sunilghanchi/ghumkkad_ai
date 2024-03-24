@@ -5,7 +5,7 @@ Ghumkkad AI is a comprehensive travel recommendation system that leverages three
 ## Features
 
 - **Personalized Recommendations:** Users can input their preferences for destination, hotel features, attraction features, restaurant description, restaurant locality, maximum hotel price, and day of travel to receive tailored recommendations.
-- **Itinerary Generation:** Integrated Mistral 7b algorithm generates a comprehensive itinerary based on user inputs, providing a structured plan for the day of travel.
+- **Itinerary Generation:** Integrated DeepSeek Chat algorithm generates a comprehensive itinerary based on user inputs, providing a structured plan for the day of travel.
 - **Multiple Recommendation Engines:** Ghumkkad AI employs three recommendation engines for hotels, attractions, and restaurants to ensure comprehensive recommendations.
 - **Flexibility:** Users have the flexibility to specify additional preferences based on their preferences, enhancing the relevance of recommendations.
 - **Streamlined Trip Planning:** By analyzing user inputs and utilizing machine learning techniques, Ghumkkad AI streamlines the trip planning process, delivering top recommendations that match user criteria.
