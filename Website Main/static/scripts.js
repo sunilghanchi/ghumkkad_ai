@@ -175,34 +175,29 @@ getRecommendationsButton.addEventListener("click", function (event) {
         // Process itinerary
         var itineraryData = JSON.parse(data[1]);
         var itineraryHTML = `<div id='iterContent' class='content itr_content'>
-<div id='itr_id' class='each_content'>
-  <p><strong>Itinerary:</strong></p>`;
+<div id='itr_id' class='each_content'>`;
 
         // Split the itinerary string into lines
         var lines = itineraryData.output.split("\n");
 
-        // Iterate over each line
         lines.forEach(function (line) {
           // Skip empty lines
           if (line.trim() !== "") {
-            // Check if the line starts with '*' indicating a list item
-            if (line.startsWith("Day")) {
-              // Add list item to the HTML
-              itineraryHTML += `<br>`;
-            }
-            if (line.startsWith("Note")) {
-              // Add list item to the HTML
-              itineraryHTML += `<br>`;
-            }
-            if (line.startsWith("*")) {
-              // Add list item to the HTML
-              itineraryHTML += `<div><li>${line.substring(2)}</li></div>`;
-            } else {
-              // Add other lines as paragraph elements to the HTML
-              itineraryHTML += `<div><p>${line}</p></div>`;
+            // Check if the line starts with 'Day' indicating a new day
+            if (!line.includes("**")) {
+              if (line.startsWith("Day")) {
+                itineraryHTML += `<br>${line}`; // Add as heading
+              } else if (line.startsWith("-")) {
+                itineraryHTML += `<li>${line.replace(/^\s*-\s*/, '')}</li>`; // Remove '-' and add as list item
+              } else if (line.startsWith("Note")) {
+                itineraryHTML += `<br>${line}`; // Add as bold text
+              } else {
+                itineraryHTML += `<p>${line}</p>`; // Add as paragraph
+              }
             }
           }
         });
+        
 
         // Close the div elements
         itineraryHTML += `</div>
