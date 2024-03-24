@@ -5,20 +5,15 @@ import pickle
 import recommendor
 import place_func
 import rest_recc
-import replicate
 import json
-import nltk
-import os
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
+from openai import OpenAI
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 CORS(app)
 
-#REPLICATE_API_TOKEN="Your-Token-Here"
+# DEEPSEEK_API_TOKEN="your-token-here"
 
-REPLICATE_API_TOKEN = os.getenv("Token")
+DEEPSEEK_API_TOKEN = os.getenv("Token")
 
 # Global variables to store recommendations data
 recommendations_data = {'hotels': None, 'attractions': None, 'restaurants': None}
@@ -80,23 +75,16 @@ def get_recommendations():
 
     # Prepare and return recommendations as JSON response
     iter_data = f'City of travel: {city}, days of travel: {days}, {recommendations_data}'
-    client = replicate.Client(api_token=REPLICATE_API_TOKEN)
-    output = ""
-    if recommendations_data['hotels'] is not None:
-        for event in client.stream(
-            "mistralai/mixtral-8x7b-instruct-v0.1",
-            input={
-                "top_k": 50,
-                "top_p": 0.9,
-                "prompt": "Generate a detailed trip itinerary based on the parsed data, covering the destination in the provided number of days. Ensure that the itinerary includes changing the accommodation for every day and does not exceed the specified number of days, shorten the hotel details. Please provide the number of days for the trip explicitly." + iter_data,
-                "temperature": 0.01,
-                "max_new_tokens": 1024,
-                "prompt_template": "<s>[INST] {prompt} [/INST] ",
-                "presence_penalty": 0,
-                "frequency_penalty": 0
-            },
-        ):
-            output += str(event)
+    client = OpenAI(api_key=DEEPSEEK_API_TOKEN, base_url="https://api.deepseek.com/v1")
+
+    response = client.chat.completions.create(
+    model="deepseek-chat",
+    messages=[
+        {"role": "system", "content": "You are a itinerary generator"},
+        {"role": "user", "content": "Generate a detailed trip itinerary based on the parsed data, covering the destination in the provided number of days. Ensure that the itinerary includes changing the accommodation for every day and does not exceed the specified number of days, shorten the hotel details. Please provide the number of days for the trip explicitly:" + iter_data},
+    ]
+)
+    output = response.choices[0].message.content
     iter = json.dumps({"output": output})
     
     return jsonify(recommendations_data,iter)
