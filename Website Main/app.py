@@ -8,6 +8,10 @@ import rest_recc
 import json
 import os
 from openai import OpenAI
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 CORS(app)
