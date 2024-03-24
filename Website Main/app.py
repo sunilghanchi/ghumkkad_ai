@@ -6,6 +6,7 @@ import recommendor
 import place_func
 import rest_recc
 import json
+import os
 from openai import OpenAI
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
