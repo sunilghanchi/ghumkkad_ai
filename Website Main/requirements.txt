@@ -6,4 +6,4 @@ nltk
 streamlit
 pysqlite3
 gunicorn
-replicate
+openai
