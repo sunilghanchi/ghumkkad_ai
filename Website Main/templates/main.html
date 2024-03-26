@@ -42,7 +42,7 @@
                         <p id="dest_err" class="error"></p>
                         <div class="form-row required">
                             <label id="days_label" for="days">Days of Travel:</label>
-                            <input type="text" id="days" name="days" placeholder="Enter number of days" oninput="return clr_err('days','dest_err')">
+                            <input type="number" id="days" name="days" placeholder="Enter number of days" oninput="return clr_err('days','dest_err')">
                         </div>
                         <div class="form-row">
                             <label for="hotel-features">Hotel Features:</label>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="form-row required">
                             <label for="hotel-price">Maximum Hotel Price:</label>
-                            <input type="number" id="hotel-price" name="hotel-price" placeholder="Enter maximum hotel price" oninput="return clr_err('hotel-price','price_err')">
+                            <input type="number" id="hotel-price" name="hotel-price" placeholder="Enter maximum hotel price" min="500" oninput="return clr_err('hotel-price','price_err')">
                         </div>
                         <p id="price_err" class="error"></p>
                         <div class="form-row">
