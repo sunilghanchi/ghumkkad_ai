@@ -20,7 +20,7 @@ def rest_recc(city, description, locality, df):
         for se in f1_set:
             f_set.add(lemm.lemmatize(se))
 
-    req_based = df[df['City'] == city.lower()]
+    req_based = df[df['City'] == city.lower().replace(" ", "")]
 
     if req_based.empty:
         print("No attractions data found for this city.")
