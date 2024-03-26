@@ -109,6 +109,14 @@ getRecommendationsButton.addEventListener("click", function (event) {
   var price_input = document.getElementById("hotel-price");
   if (hotelPrice === "") {
     price_input.style.border = "4px solid red";
+  } else if (hotelPrice < 500) {
+    show_error.innerHTML = "Hotel price should not be less than 500.";
+    show_error.style.color = "red";
+    price_input.style.border = "4px solid red";
+
+    getRecommendationsButton.classList.remove("loading");
+    getRecommendationsButton.disabled = false;
+    return; // Stop further execution
   }
 
   // Create FormData object to send form data to the server
