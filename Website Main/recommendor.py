@@ -17,7 +17,7 @@ def recommendor(city, features, price, df):
     for se in f1_set:
         f_set.add(lemm.lemmatize(se))
     
-    reqbased = df[df['City'] == city.lower()]
+    reqbased = df[df['City'] == city.lower().replace(" ", "")]
     if reqbased.empty:
         print("No hotels data found for this city.")
         return None
