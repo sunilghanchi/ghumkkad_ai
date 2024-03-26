@@ -17,7 +17,7 @@ def requirementbased(city, attractions, main_df):
     f_set = set()
     for se in f1_set:
         f_set.add(lemm.lemmatize(se))
-    reqbased = main_df[main_df['City'] == city.lower()]
+    reqbased = main_df[main_df['City'] == city.lower().replace(" ", "")]
     if reqbased.empty:
         print("No attractions data found for this city.")
         return None
